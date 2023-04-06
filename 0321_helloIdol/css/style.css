@@ -19,4 +19,39 @@ h1+h3 {
 h1,
 h2 {
     background-color: plum;
+}h5~h6, /*h6만 적용*/
+ol,
+ul{ /*이렇게만 써도 ul 아래 li 가 먹는다. 위에가 적용되면 그것을 상속받아 그대로 가져다 쓰는 것들이 있기 때문 */
+    color : #333; /*시험문제*/
+    font-size : 31px; /*시험문제*/
+}
+.korea{
+    color: skyblue;
+}
+.japan{/* .japan, .canada 이런식으로 ,를 찍고 하면 둘 다 적용됨*/
+    color: crimson;   
+}
+.incheon{/*인천이랑 한국 둘 다 동급인데 나중에 입혔기 때문에 인천이 적용된다*/
+    color:darkblue;
+}
+.leader{
+    color: purple;
+}
+li:nth-child(5){ /*li:nth-child(5) li동급 레벨의 5번째 아이*/
+    text-decoration: underline;
+}
+li:nth-child(even){/*짝수행 적용, odd:홀수; even,2n:짝수 1n: 전체적용 */
+    background-color: #eee;
+}
+li:nth-child(5n){ /*5의 배수*/
+    background-color: #aaa;
+}
+[type="text"]{
+    background-color: aqua;
+}
+ul:nth-child(3)>li:nth-child(2):hover{ /*태그 이름이 다르더라도 두번째 자녀이면 적용 */
+    text-decoration: overline;
+}
+body > div:nth-child(8) > ul:nth-child(3) > li:nth-child(2){
+    font-size: 8px;
 }
