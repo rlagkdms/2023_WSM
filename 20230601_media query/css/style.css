@@ -1,0 +1,22 @@
+/* desktop */
+body{
+    background-color: crimson;
+}
+/* tablet */
+/*최대 너비가 720px 때까지만 적용(720보다 작을 때 적용)->720때는 darkcyan 시험!!
+최대 너비가 720px 일 때, 적용 즉, 720px 보다 작을 때 적용 
+*/
+@media screen  and (max-width: 720px) { 
+    body{
+        background-color: darkcyan;
+    }
+}
+
+/* moblie */
+/* 최대 너비가 540px 일 때, 적용 즉, 540px 보다 작을 때 적용  */
+@media screen and (max-width: 540px) {
+    body{
+        background-color: deeppink;
+    }
+    
+}

@@ -1,0 +1,23 @@
+/* 큰 범위의 것을 맨 처음에 써야 작은 범위가 화면에 표시될 수 있음. (덮어쓰기랑 같다 )  */
+
+/* 모바일 미디어쿼리는 전체를 딥핑크로 칠하는 것과 같아서 미디어쿼리가 필요없음  */
+/* mobile */
+body{
+    background-color: deeppink;
+}
+/*tablet*/
+@media screen and (min-width: 541px) {
+    body{
+        background-color: darkcyan;
+    }
+}
+/* desktop */
+@media screen and (min-width: 721px) {
+    body{
+        background-color: crimson;
+    }
+}
+
+
+
+
