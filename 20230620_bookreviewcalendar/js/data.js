@@ -80,3 +80,11 @@ let reviews = [
         "thoughts": "좋은 말. 지키기는 어려운",
     },
 ]
+// let entertainer = ["아이유","이석훈","zb1"];
+// console.log(entertainer[2]);
+// let person ={"group":"zb1","name":"장하오","country":"china"};
+// console.log(person["name"]);//장하오
+// console.log(person.name);//장하오(-가 들어갈 시에는 이 구문은 변수 규칙을 따르기 때문에 오류가 남. 위에걸로 써주어야함.)
+
+// console.log(books[3].author);
+// console.log(books[3]["author"]);
