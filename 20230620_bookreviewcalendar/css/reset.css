@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 박스가 실제 사이즈가 되도록 지정하는 방법  */
+}
+ul{
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+img{
+    max-width: 100%;/*화면 크기에 맞게 조절, 화면 사이즈가 사진보다 커지면 공백*/
+    height: auto;/* auto : 기본값 */
+}
