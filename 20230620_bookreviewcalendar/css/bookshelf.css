@@ -1,0 +1,25 @@
+.bookshelf{
+    margin-top: calc(44px + 100px); /*calc(): 계산기. 연산자는 양 옆을 띄어쓰기 해야 함  */
+    display: flex; /*수평 배열. flex의 기본 배열이 수평*/
+    gap : 80px;/*열과 행의 gap을 줄 수 있음. (둘 다 지정한 것임) //따로 줄 수도 있다.열과 열 : row-gap  행과 행 : column-gap */
+    flex-wrap: wrap; /*길면 내려쓰자*/
+    justify-content: center; /*메인 축 (수평) 가운데로*/
+
+}
+.row-container {
+    display: flex; /*박스 안의 요소를 수평 배열 */
+    column-gap: 80px; 
+    align-items: flex-end; /*교차축 밑에 정렬하자*/
+}
+
+.book-item > img{
+    width: 150px;
+    box-shadow: 0 16px 32px #dddddd; /* p1:x좌표 p2:y좌표 p3:번지는 공간 크기 p4: 색 */
+    transition: all 0.2s; /*hover를 했을 때 변하는 속성 전체를 1초에 마감  :hover속성에 있는 곳에만 적용하게 되면 hover를 벗어나게 되면 없어지기 때문에 여기에 적용*/
+}
+.book-item>img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px #e1e1e1;
+    cursor: pointer;
+  
+}
