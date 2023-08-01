@@ -15,12 +15,12 @@
     align-items: flex-end; /*교차축 밑에 정렬하자*/
 }
 
-.book-item > a> img{
+.book-item  img{
     width: 150px;
     box-shadow: 0 16px 32px #dddddd; /* p1:x좌표 p2:y좌표 p3:번지는 공간 크기 p4: 색 */
     transition: all 0.2s; /*hover를 했을 때 변하는 속성 전체를 1초에 마감  :hover속성에 있는 곳에만 적용하게 되면 hover를 벗어나게 되면 없어지기 때문에 여기에 적용*/
 }
-.book-item>img:hover {
+.book-item img:hover {
     transform: translateY(-4px);
     box-shadow: 0 24px 48px #e1e1e1;
     cursor: pointer;
