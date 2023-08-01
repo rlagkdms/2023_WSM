@@ -4,8 +4,8 @@
     gap : 80px;/*열과 행의 gap을 줄 수 있음. (둘 다 지정한 것임) //따로 줄 수도 있다.열과 열 : row-gap  행과 행 : column-gap */
     flex-wrap: wrap; /*길면 내려쓰자*/
     justify-content: center; /*메인 축 (수평) 가운데로*/
-    max-width: calc(150px * 4 + 80px * 3); /*한 줄에 최대 두개의 row-container ,4개의 book-item /
-    margin-left: auto; /*좁아진 bookshelf 자체를 가운데로*/
+    max-width: calc(150px * 4 + 80px * 3); /*한 줄에 최대 두개의 row-container ,4개의 book-item */
+    margin-left: auto; /* 좁아진 bookshelf 자체를 가운데로 */
     margin-right: auto; /*좁아진 bookshelf 자체를 가운데로*/
 
 }
@@ -15,7 +15,7 @@
     align-items: flex-end; /*교차축 밑에 정렬하자*/
 }
 
-.book-item > img{
+.book-item > a> img{
     width: 150px;
     box-shadow: 0 16px 32px #dddddd; /* p1:x좌표 p2:y좌표 p3:번지는 공간 크기 p4: 색 */
     transition: all 0.2s; /*hover를 했을 때 변하는 속성 전체를 1초에 마감  :hover속성에 있는 곳에만 적용하게 되면 hover를 벗어나게 되면 없어지기 때문에 여기에 적용*/
