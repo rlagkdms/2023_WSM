@@ -1,10 +1,10 @@
 main{
     margin-top: calc(44px + 100px); /*calc안에서는 연산자 양쪽에 공백을 주어야 한다. */ 
 }
-main div{
-    /* border : 2px solid black; */
+/* main div{
+    border : 2px solid black; 
     border: 2px solid violet;
-}
+} */
 /* #review{
     display: flex;
 }
@@ -22,3 +22,56 @@ main div{
     width: 200px;
     height: 300px;
 } */
+/* div는 한 줄을 차지하기 때문에 다 내려가서 배치가 되고, span 은 그렇지 않음 */
+.container{
+    display: flex;
+}
+.info-groups{
+    border :2px solid black;
+    flex-wrap: wrap;
+}
+.info,
+.review{
+    flex-direction: column;
+}
+.info-group{
+    flex-direction: column;
+}
+.reviews{
+    flex-direction: column;
+}
+.book-image{
+    width: 200px;
+    height: 400px;
+}
+.info{
+    width: 300px;
+    height: 150px;
+}
+.review{
+    height: 150px;
+}
+@media screen and (max-width:540px) { /*540px 이하의 너비이면 아래 스타일 적용*/
+    .image-info-groups{
+        flex-direction: column;
+    }
+    main{
+        margin-top: calc(44px + 40px);
+    }
+}
+
+
+
+/*delete me*/
+main div{
+    border: 2px solid violet;
+}
+.book-image{
+    background-color: cornflowerblue;
+}
+.info{
+    background-color: silver;
+}
+.review{
+ background-color: cadetblue;
+}
