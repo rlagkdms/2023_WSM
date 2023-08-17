@@ -43,7 +43,6 @@ console.log(title, author, publisher, bookImage);
 //HTML요소 ->js 요소 
 const titleDiv = document.getElementsByClassName("title")[1];
 titleDiv.innerHTML = title;
-titleDiv.innerHTML = title;
 
 const authorDiv = document.getElementsByClassName("author")[1];
 authorDiv.innerHTML = author;
