@@ -5,6 +5,12 @@
 const bookId= new URL(window.location.href).searchParams.get('book'); //window.location.href //window 브라우저 창에 있는 주소, searchParams: 속성. 주소에서 물음표를 뗀 나머지. .get() : 파라미터의 값을 구해와라  
 // console.log(typeof window.location.href); //string 
 console.log(`bookId: ${bookId}, type: ${typeof bookId}`);
+//bookId가 null이면, index.html로 가자 
+if(bookId === null){
+    window.location.href = "index.html";//-> window :크롬, 웹브라우저 창을 의미함
+    // location.replace('index.html'); // 새로운 창 열려서 이동하는 문제 해결 
+    //window.open('index.html', target="_top"); open의 경우 창이 하나 더 생성됨. 그래서 뒤에 타겟을 지정함. 
+}
 
 //URL에 있는 book parameter 값(string):bookId
 //->string을 number로 변환:bookIdNumber 
