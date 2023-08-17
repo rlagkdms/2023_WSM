@@ -54,3 +54,14 @@ publisherDiv.innerHTML = publisher;
 const bookImgDiv = document.getElementsByClassName("book-image")[0];
 bookImgDiv.innerHTML =`<img src='${bookImage}'>`; //태그는 띄어쓰기를 속성의 구분자로 보기 때문에 띄워쓰면 다른 속성으로 잘못 인식하게 됨. 
 // bookImgDiv.src = bookImage;// bookImgDiv 가 img속성이 아니기 때문에 적용되지 않음. 
+const readDateDiv= document.getElementsByClassName("read-date")[1];
+let now = "2030년 8월 17일";
+now = new Date(); // 현재 날짜와 시각 객체 
+let year = now.getFullYear() 
+let month = now.getMonth();
+let date = now.getDate();
+let day = now.getDay();
+var week = ['일', '월','화','수','목','금','토'];
+now = `${year}년 ${month+1}월 ${date}일 ${week[day]}요일`;
+//선생님은 day = week[day]+"요일"로 처리하고 now = `${year}년 ${month+1}월 ${date}일 ${day}요일`;
+readDateDiv.innerHTML =now;
