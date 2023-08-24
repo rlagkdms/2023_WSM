@@ -1,0 +1,32 @@
+.container .item{
+    border: 2px solid black;
+}
+body
+,html{
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%; /*자기 부모의 너비의 100%를 말하는 것. body는 기본적으로 너비가 100%이지만 높이는 컨텐츠의 양만큼이 100%임. 그래서 잘 먹히지 않는다. 해결방법 : html,body에 height: 100% or container height:100vh; //웹사이트에 표시하는 웹브라우저의 100vh : 높이를 브라우저 창 전체를 차지하는 방법*/
+    display: grid;
+    grid-template-columns:3fr 7fr;/*30% 70%*/
+    grid-template-rows:4fr 6fr; /*굳이 하지 않아도 정렬됨.*/
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center; /*middle 아님 주의! 시험 !*/
+}
+.item1{
+    background-color: #efec9a;
+    
+}
+.item2{
+    background-color: #67d1e6;
+}
+.item3{
+background-color: #f07b6b;
+}
+.item4{
+    background-color: #a7adbb;
+}
