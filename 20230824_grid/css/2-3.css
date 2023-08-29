@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,
+body{
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr repeat(5, 1fr);
+    grid-template-rows:repeat(8, 1fr);
+}
+.weekday{
+    background-color: rgb(249, 137, 109);
+}
+.item{
+    border: 2px solid darkgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkgreen;
+    text-align: center; /*flex 한 하나의 아이템 안에 텍스트를 가운데 정렬하기*/
+}
+
+/*.item:nth-child(6n + 7)*/ /*7 + 6n 은 안되고, 6n+7은 됨.*/
+.item:nth-child(7),
+.item:nth-child(13),
+.item:nth-child(18),
+.item:nth-child(23),
+.item:nth-child(27),
+.item:nth-child(33),
+.item:nth-child(37) 
+{
+    background-color: khaki;
+}
+.item:nth-child(12){
+    /* background-color: cornflowerblue; */
+    /* grid-column-start: 6;
+    grid-column-end: 7; grid-column과 같다   */
+    grid-column: 6/7;
+    grid-row: 2/4;
+    /* grid-column: 7/6;
+    grid-column: -2/-1; /*이거 시험*/
+    /* grid-column: -1/-2;  */
+}
+.item:nth-child(17){
+    /* background-color: cadetblue; */
+    grid-row: 3/5; /*기본값 지정해주지 않으면 1로 바뀌게 됨. -> 맨앞으로 이동*/
+    /* grid-row: 3/ span 2; */
+    /*grid-row: span 2 / 5; 끝 점을 맞추어야 한다.*/ /*이거 시험*/
+    grid-column: 5/6;/*한 칸이면 5만 해줘도 된다. */
+    /* grid-row: -5/-7; */
+}
+.item:nth-child(19){
+    grid-row: 4/6;
+    grid-column: 2;
+    /* background-color: aquamarine; */
+}
+.item:nth-child(21){
+    grid-row: 4/6;
+    grid-column: 4;
+}
+.item:nth-child(28){
+    grid-row: 6/8;
+    grid-column: 2;
+}
+.item:nth-child(32){
+    grid-row: 6/8;
+    grid-column: 6;
+}
+.item:nth-child(34){
+    grid-row: 7/9;
+    grid-column: 3;
+}
+.item:nth-child(35) {
+    grid-row: 7/9;
+    grid-column: 4;
+}
