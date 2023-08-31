@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container *{
+    border: 2px solid black;
+}
+
+figure>img {
+    width: 200px;
+    height: 100px;
+    object-fit: cover; /*cover : 비율 맞추고 남은부분 자르기 , contain : 비율 흐트러치지 않고 맞춤 -> 여백이 생길 수 있음 시험!*/
+}
+html{
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 200px 3fr 1fr;
+    grid-template-rows: 44px 1fr 80px;
+    grid-template-areas: 
+    "header header header"
+    "side_left main side2"
+    "footer footer footer";
+}
+.header{
+    background-color: aqua;
+    grid-area: header;
+}
+.side1{
+    background-color: cadetblue;
+    grid-area: side_left;
+}
+.main{
+    background-color: cornflowerblue;
+    grid-area: main;
+}
+.side2{
+    background-color: lightblue;
+    grid-area: side2;
+}
+.footer{
+    
+    background-color: lightcoral;
+}
