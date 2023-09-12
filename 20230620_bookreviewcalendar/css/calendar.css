@@ -33,7 +33,7 @@ main{
     place-items: center;
 }
 .date.item.item:nth-child(1){
-    grid-column:6; /*1일을 금요일로 옮기기*/
+    /* grid-column:6; 1일을 금요일로 옮기기 */
 }
 
 .review.flex-container{
