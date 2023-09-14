@@ -11,6 +11,11 @@ main{
     column-gap: 40px;
     margin-bottom: 20px;
 }
+.left,
+.month,
+.right{
+    cursor: pointer;
+}
 .weekday.container{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -35,7 +40,12 @@ main{
 .date.item.item:nth-child(1){
     /* grid-column:6; 1일을 금요일로 옮기기 */
 }
-
+/* .date.item:nth-child(7n+2){
+    color:blue;
+}
+.date-item:nth-child(7n+3){
+    color:red;
+} */
 .review.flex-container{
     display: flex;
     flex-direction: column;
@@ -63,3 +73,8 @@ main{
 /* main *{
     border: 2px solid black;
 } */
+
+/*손가락 모양으로 바꾸자 */
+.left:hover, .right:hover{
+    cursor: pointer;
+} 

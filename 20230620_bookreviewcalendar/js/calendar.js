@@ -48,7 +48,21 @@ const setCalendar = (year, month) => {
     // .dates.container의 자식 중 첫째자식(1일) style grid-column-start: 6
     let firstDateDiv = datesContainerDiv.firstElementChild;
     //CSS {grid-column-start : firstDateDay + 1;}
-    firstDateDiv.style.gridColumnStart = firstDateDay + 1; 
+    firstDateDiv.style.gridColumnStart = firstDateDay + 1;
+    
+    //토: 파랑, 일: 빨강 칠하자 
+    console.log('firstdateday',firstDateDay,  7-firstDateDay);
+    //토 : 파랑
+    let saturdayDivs =  datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${7-firstDateDay})`);
+    for(let dateItem of saturdayDivs){
+        dateItem.style.color = 'blue';
+    }
+    //일 : 빨강 
+    let sundayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${(7-firstDateDay+1)%7})`);
+    for(let dateItem of sundayDivs){
+        dateItem.style.color = 'red';
+    }
+
 
 }
 
@@ -73,6 +87,14 @@ leftDiv.onclick = () => {  //시험문제
 }
 // leftDiv.addEventListener('click', ()=> console.log(`${month}월`));
 
+const thisMonthDiv = document.getElementsByClassName("month")[0];
+thisMonthDiv.onclick = () =>{
+    now = new Date();
+    year = now.getFullYear(); 
+    month = now.getMonth()+1;
+
+    setCalendar(year, month);
+}
 
 let rightDiv = document.getElementsByClassName('right')[0];
 //> : 이후달
